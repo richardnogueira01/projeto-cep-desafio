@@ -1,8 +1,8 @@
-import { createStore } from 'vuex';
+import { createStore } from "vuex";
 
 const store = createStore({
   state: {
-    address: '',
+    address: "",
   },
   mutations: {
     setAddress(state, address) {
@@ -14,9 +14,12 @@ const store = createStore({
       try {
         const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
         const data = await response.json();
-        commit('setAddress', `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`);
+        commit(
+          "setAddress",
+          `${data.logradouro}, ${data.bairro}, ${data.localidade} - ${data.uf}`
+        );
       } catch (error) {
-        console.error('Erro ao buscar o CEP:', error);
+        console.error("Erro ao buscar o CEP:", error);
       }
     },
   },

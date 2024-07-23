@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="home-container">
+    <div class="overlay"></div>
     <h1>Bem-vindo ao Sistema de Pesquisa de CEP</h1>
-    <img src="" alt="Descrição da imagem">
-    <button @click="goToSearch">Pesquisar CEP</button>
+    <button @click="goToSearch" class="search-button">Pesquisar CEP</button>
   </div>
 </template>
 
@@ -22,5 +22,57 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* Adicione seus estilos aqui */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-image: url('@/assets/image-home-background.jpg'); /* Coloque aqui o URL da imagem de fundo desejada */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.home-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
 </style>

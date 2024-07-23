@@ -1,4 +1,4 @@
-# projeto_cep
+# projeto-cep
 
 ## Project setup
 ```
