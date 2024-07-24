@@ -1,7 +1,7 @@
 <template>
   <div class="home-container">
     <div class="overlay"></div>
-    <h1>{{ $t('welcome') }}</h1>
+    <h1>{{ $t('text1') }}</h1>
     <button @click="goToSearch" class="search-button">{{ $t('search') }}</button>
   </div>
 </template>

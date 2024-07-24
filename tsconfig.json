@@ -13,7 +13,9 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "vue-i18n",
+      "./src/vue-i18n.d.ts"
     ],
     "paths": {
       "@/*": [

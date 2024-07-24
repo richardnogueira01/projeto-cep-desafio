@@ -41,12 +41,12 @@ export default defineComponent({
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .logo {
-  height: 40px; /* Ajuste a altura conforme necessário */
+  height: 40px;
 }
 
 .container-menu-items {

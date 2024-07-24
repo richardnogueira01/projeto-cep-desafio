@@ -1,9 +1,9 @@
-// src/i18n.ts
 import { createI18n } from 'vue-i18n';
 
 const messages = {
   en: {
     welcome: 'Home',
+    text1: 'Welcome to the CEP Search System',
     search: 'Search ZIP Code',
     enterZip: 'Enter ZIP Code',
     searchButton: 'Search',
@@ -15,6 +15,7 @@ const messages = {
   },
   pt: {
     welcome: 'Inicio',
+    text1: 'Bem Vindo ao Sistema de Busca CEP',
     search: 'Pesquisar CEP',
     enterZip: 'Digite o CEP',
     searchButton: 'Pesquisar',
