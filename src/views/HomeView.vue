@@ -1,8 +1,8 @@
 <template>
   <div class="home-container">
     <div class="overlay"></div>
-    <h1>Bem-vindo ao Sistema de Pesquisa de CEP</h1>
-    <button @click="goToSearch" class="search-button">Pesquisar CEP</button>
+    <h1>{{ $t('welcome') }}</h1>
+    <button @click="goToSearch" class="search-button">{{ $t('search') }}</button>
   </div>
 </template>
 
@@ -67,8 +67,8 @@ export default defineComponent({
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 15px;
+  transition: background-color 0.6s ease;
   z-index: 2;
 }
 

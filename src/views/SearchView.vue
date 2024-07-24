@@ -6,21 +6,19 @@
         <input
           v-model="cep"
           type="text"
-          placeholder="Digite o CEP"
+          :placeholder="$t('enterZip')"
           @input="validateCEP"
           class="cep-input"
           maxlength="8"
         />
-        <button type="submit" class="search-button">Pesquisar</button>
+        <button type="submit" class="search-button">{{ $t('searchButton') }}</button>
       </form>
-      <label v-if="errorMessage" class="error-message">{{
-        errorMessage
-      }}</label>
+      <label v-if="errorMessage" class="error-message">{{ $t(errorMessage) }}</label>
       <div v-if="address" class="address-display">
-        <p>Endereço: {{ address }}</p>
+        <p>{{ $t('address') }}: {{ address }}</p>
       </div>
       <div v-if="address" class="map-card">
-        <h2>Localização no Mapa</h2>
+        <h2>{{ $t('location') }}</h2>
         <iframe
           :src="mapUrl"
           width="100%"
@@ -69,17 +67,15 @@ export default defineComponent({
           } else {
             address.value = "";
             mapUrl.value = "";
-            errorMessage.value =
-              "CEP não encontrado. Verifique o CEP e tente novamente.";
+            errorMessage.value = 'notFound';
           }
         } catch (error) {
           address.value = "";
           mapUrl.value = "";
-          errorMessage.value =
-            "Erro ao buscar o endereço. Tente novamente mais tarde.";
+          errorMessage.value = 'error';
         }
       } else {
-        errorMessage.value = "CEP inválido. Digite um CEP válido.";
+        errorMessage.value = 'invalid';
         address.value = "";
         mapUrl.value = "";
       }

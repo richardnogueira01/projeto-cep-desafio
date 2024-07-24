@@ -2,17 +2,31 @@
   <nav class="navbar">
     <div class="container-menu-items">
       <img src="@/assets/logo.png" alt="Logo" class="logo" />
-      <router-link to="/" class="nav-link">Home</router-link>
-      <router-link to="/search" class="nav-link">Busca</router-link>
+      <router-link to="/" class="nav-link">{{ $t('welcome') }}</router-link>
+      <router-link to="/search" class="nav-link">{{ $t('search') }}</router-link>
+    </div>
+    <div class="language-switch">
+      <img src="@/assets/pt.png" alt="Português" class="flag" @click="switchLanguage('pt')" />
+      <img src="@/assets/en.png" alt="English" class="flag" @click="switchLanguage('en')" />
     </div>
   </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "NavbarComponent",
+  setup() {
+    const { locale } = useI18n();
+
+    const switchLanguage = (language: string) => {
+      locale.value = language;
+    };
+
+    return { switchLanguage };
+  },
 });
 </script>
 
@@ -26,16 +40,17 @@ export default defineComponent({
   left: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
   height: 40px; /* Ajuste a altura conforme necessário */
 }
 
-.navbar .container-menu-items {
-  margin-left: 20vw;
+.container-menu-items {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 50px;
 }
@@ -48,5 +63,17 @@ export default defineComponent({
 
 .nav-link:hover {
   text-decoration: underline;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  gap: 10px;
+}
+
+.flag {
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+  cursor: pointer;
 }
 </style>
