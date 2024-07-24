@@ -38,7 +38,7 @@ body {
 
 router-view {
   flex: 1;
-  margin-top: 60px; /* Espaço para o navbar fixo */
+  margin-top: 60px; 
 }
 
 nav {

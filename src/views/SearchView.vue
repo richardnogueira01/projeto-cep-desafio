@@ -63,7 +63,7 @@ export default defineComponent({
           if (fetchedAddress && !fetchedAddress.includes(undefined)) {
             address.value = fetchedAddress;
             updateMapUrl(address.value);
-            errorMessage.value = ""; // Limpa a mensagem de erro se o endereço for encontrado
+            errorMessage.value = "";
           } else {
             address.value = "";
             mapUrl.value = "";
@@ -113,8 +113,8 @@ export default defineComponent({
   background-size: cover;
   background-position: center;
   z-index: 2;
-  position: relative; /* Adicionado para corrigir o posicionamento do overlay */
-  padding: 20px; /* Adiciona um pouco de espaçamento */
+  position: relative; 
+  padding: 20px; 
 }
 
 .overlay {
@@ -130,21 +130,21 @@ export default defineComponent({
 .card {
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Alinha os itens para ocupar a largura total */
+  align-items: stretch; 
   width: 100%;
-  max-width: 600px; /* Ajusta o tamanho máximo do card */
+  max-width: 600px; 
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative; /* Adicionado para corrigir o posicionamento do iframe */
-  overflow: hidden; /* Adicionado para garantir que o conteúdo não ultrapasse as bordas */
+  position: relative; 
+  overflow: hidden; 
 }
 
 .input-group {
   display: flex;
-  gap: 10px; /* Adiciona espaçamento entre o input e o botão */
+  gap: 10px; 
 }
 
 .cep-input {
@@ -152,7 +152,7 @@ export default defineComponent({
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%; /* Ajusta a largura para preencher o container */
+  width: 100%; 
   max-width: 100%;
 }
 
@@ -165,7 +165,7 @@ export default defineComponent({
   cursor: pointer;
   border-radius: 4px;
   transition: background-color 0.3s ease;
-  white-space: nowrap; /* Impede que o texto do botão quebre em várias linhas */
+  white-space: nowrap; 
 }
 
 .search-button:hover {
@@ -187,7 +187,7 @@ export default defineComponent({
   padding: 10px;
   width: 100%;
   height: 400px;
-  overflow: hidden; /* Adicionado para garantir que o conteúdo do iframe não ultrapasse o card */
+  overflow: hidden; 
 }
 
 .map-card h2 {
@@ -217,7 +217,7 @@ iframe {
   }
 
   .map-card {
-    height: 300px; /* Reduz a altura do mapa em telas menores */
+    height: 300px; 
   }
 
   .map-card h2 {
@@ -241,7 +241,7 @@ iframe {
   }
 
   .map-card {
-    height: 250px; /* Reduz a altura do mapa em telas muito pequenas */
+    height: 250px; 
   }
 
   .map-card h2 {

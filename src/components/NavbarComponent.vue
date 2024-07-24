@@ -73,7 +73,7 @@ export default defineComponent({
 }
 
 .flag {
-  width: 30px; /* Ajuste o tamanho conforme necessário */
+  width: 30px; 
   cursor: pointer;
 }
 

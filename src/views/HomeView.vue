@@ -29,7 +29,7 @@ export default defineComponent({
   justify-content: center;
   text-align: center;
   height: 100vh;
-  background-image: url('@/assets/image-home-background.jpg'); /* Coloque aqui o URL da imagem de fundo desejada */
+  background-image: url('@/assets/image-home-background.jpg'); 
   background-size: cover;
   background-position: center;
   position: relative;

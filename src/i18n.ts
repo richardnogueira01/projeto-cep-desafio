@@ -3,8 +3,8 @@ import { createI18n } from 'vue-i18n';
 const messages = {
   en: {
     welcome: 'Home',
-    text1: 'Welcome to the CEP Search System',
-    search: 'Search ZIP Code',
+    text1: 'Welcome to the ZIP Code Search System',
+    search: 'Search',
     enterZip: 'Enter ZIP Code',
     searchButton: 'Search',
     address: 'Address',
@@ -16,7 +16,7 @@ const messages = {
   pt: {
     welcome: 'Inicio',
     text1: 'Bem Vindo ao Sistema de Busca CEP',
-    search: 'Pesquisar CEP',
+    search: 'Buscar',
     enterZip: 'Digite o CEP',
     searchButton: 'Pesquisar',
     address: 'Endereço',
@@ -28,8 +28,8 @@ const messages = {
 };
 
 const i18n = createI18n({
-  locale: 'pt', // idioma padrão
-  fallbackLocale: 'en', // idioma de fallback
+  locale: 'pt', 
+  fallbackLocale: 'en', 
   messages,
 });
 
