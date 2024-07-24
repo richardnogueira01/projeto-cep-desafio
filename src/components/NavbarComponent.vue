@@ -82,7 +82,7 @@ export default defineComponent({
   .container-menu-items {
   display: flex;
   align-items: center;
-  gap: 15px !important;
+  gap: 25px !important;
   font-size: 14px;
 }
 
