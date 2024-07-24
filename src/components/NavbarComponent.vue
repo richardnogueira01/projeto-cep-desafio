@@ -76,4 +76,29 @@ export default defineComponent({
   width: 30px; /* Ajuste o tamanho conforme necessário */
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+
+  .container-menu-items {
+  display: flex;
+  align-items: center;
+  gap: 15px !important;
+  font-size: 14px;
+}
+
+.container-menu-items .logo {
+  height: 30px;
+}
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 25px;
+}
+
+}
+
 </style>
